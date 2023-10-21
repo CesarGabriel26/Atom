@@ -116,6 +116,11 @@ function Atualize(id) {
 	var name = element.querySelector('.name').value
 	var number = element.querySelector('.number').value
 
+	if (number > 500) {
+		number = 500
+		element.querySelector('.number').value = number
+	}
+
 	delete particles[id]
 	
 	Atoms[id] = create(id,number,color)
@@ -178,6 +183,16 @@ function AtualizeInteracoes(id) {
 	var select1 = element.querySelector('.sele1').value
 	var select2 = element.querySelector('.sele2').value
 	var force = element.querySelector('.force').value
+
+	if (force > 1) {
+		force = 1
+		element.querySelector('.force').value = force
+	}
+
+	if (force < -1) {
+		force = -1
+		element.querySelector('.force').value = force
+	}
 
 	Interacoes[id] = [select1,select2,force]
 	update()
