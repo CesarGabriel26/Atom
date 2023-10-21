@@ -1,0 +1,59 @@
+header {
+    position: absolute;
+    top: 0;
+
+    height: 50px;
+    width: 100%;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    backdrop-filter: Blur(5px);
+
+    display: flex;
+    align-items: center;
+}
+
+header i {
+    margin: 3px;
+    font-size: 25px;
+}
+
+.input-group-text {
+    overflow: hidden;
+}
+
+button .indicator::before{
+    transform: rotateZ(-180deg);
+    transition: .3s ease-in-out;
+}
+
+button.collapsed .indicator::before{
+    transform: rotateZ(0deg);
+}
+
+.InteracoesList,
+.ParticlesList {
+    height: 250px;
+    overflow-y: scroll;
+
+}
+
+.offcanvas {
+    width: 550px !important;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+}
+
+.Particle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Particle input[type="color"] {
+    height: 45px;
+    width: 45px;
+}
